@@ -23,4 +23,4 @@ try {
   console.log('something went wrong, error message: ', e.message)
 }
 
-// console.log(process.argv)
+console.log(process.argv[2])

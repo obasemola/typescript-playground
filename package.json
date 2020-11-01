@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "calculator": "ts-node calculator.ts",
+    "multiply": "ts-node multiply.ts",
+    "calculateBmi": "ts-node bmiCalculator.ts",
     "ts-node": "ts-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
