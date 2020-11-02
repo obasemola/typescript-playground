@@ -33,8 +33,7 @@ const calculateExercises = (args: Array<number>): dailyExerciseHoursAnalysis => 
 
 }
 
-const arguments = Array.from(process.argv.slice(2))
-const args = arguments.map((arg) => {
+const args = Array.from(process.argv.slice(2)).map((arg) => {
   return parseFloat(arg)
 })
 
