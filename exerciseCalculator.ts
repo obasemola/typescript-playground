@@ -64,27 +64,28 @@ const calculateExercises = (args: Array<number>): dailyExerciseHoursAnalysis => 
 };
 
 app.post('/exercises', (req, res) => {
-  
   const requestBody = req.body as BodyObj;
-  if(determineIfBodyObj(requestBody)){
-    console.log('e no work');
+  const parametersMissingError = {
+    error: "parameters missing"
+  };
+
+  const malformattedParametersError = {
+    error: "malformatted parameters"
+  };
+
+  if(!requestBody.daily_exercises){
+    console.log(parametersMissingError);
   }
   
-  //  eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  //  requestBody = req.body;
-  //  {
-  //   "daily_exercises": [1, 0, 2, 0, 3, 0, 2.5],
-  //   "target": 2.5
-  // };
-
-  const args: Array<number> = requestBody.daily_exercises;
-  const result = calculateExercises(args);
-  result.target = requestBody.target;
-  res.send(result);
-
-  // console.log(req.body);
-
-  // res.json(result);
+  if(determineIfBodyObj(requestBody)){
+    console.log('e work');
+    const args: Array<number> = requestBody.daily_exercises;
+    const result = calculateExercises(args);
+    result.target = requestBody.target;
+    res.send(result);
+  } else {
+    console.log(malformattedParametersError);
+  }
 
 });
 
