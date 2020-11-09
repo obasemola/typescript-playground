@@ -7,7 +7,7 @@
     "calculator": "ts-node calculator.ts",
     "multiply": "ts-node multiply.ts",
     "calculateBmi": "ts-node bmiCalculator.ts",
-    "calculateExercises": "ts-node exerciseCalculator.ts",
+    "calculateExercises": "ts-node-dev exerciseCalculator.ts",
     "start": "ts-node index.ts",
     "dev": "ts-node-dev index.ts",
     "lint": "eslint --ext .ts .",
@@ -35,6 +35,7 @@
     "typescript": "^4.0.5"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "npm": "^6.14.8"
   }
 }

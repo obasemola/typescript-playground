@@ -1,22 +1,22 @@
 const calculateBmi = (mass: number, height: number): string => {
-  const result = mass / Math.pow((height / 100), 2)
+  const result = mass / Math.pow((height / 100), 2);
 
   if(result < 18.5) {
-    return 'underweight'
+    return 'underweight';
   }
   else if (result > 18.5 && result <= 24.9){
-    return 'Normal (healthy weight)'
+    return 'Normal (healthy weight)';
   }
   else if (result > 25.0 && result <= 29.9){
-    return 'Overweight'
+    return 'Overweight';
   }
   else {
-    return 'Obese'
+    return 'Obese';
   }
-}
+};
 
-const mass = Number(process.argv[2])
-const height = Number(process.argv[3])
+// const mass = Number(process.argv[2]);
+// const height = Number(process.argv[3]);
 
 
 export {calculateBmi};
